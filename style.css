@@ -50,6 +50,10 @@ body {
 	border: none;
 }
 
+.wrapper .faqs_cont .each_faq:last-child {
+	border: none;
+}
+
 
 
 .wrapper .faqs_cont .each_faq .question_icons_cont {
