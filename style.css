@@ -1,0 +1,117 @@
+:root {
+	--White: hsl(0, 0%, 100%);
+	--Light_pink: hsl(275, 100%, 97%);
+	--Grayish_purple: hsl(292, 16%, 49%);
+	--Dark_purple: hsl(292, 42%, 14%);
+}
+* {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+	background-image: url('./assets/images/background-pattern-mobile.svg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: var(--Light_pink);
+}
+
+.wrapper {
+	background-color: var(--White);
+	margin: 5em 1em;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+.wrapper .faqs_header {
+	display: flex;
+	align-items: center;
+	margin: 1.1em 0em;
+}
+
+.wrapper .faqs_header .header {
+	font-size: 2.5em;
+	font-weight: 600;
+	margin-left: 0.8em;
+	color: var(--Dark_purple);
+}
+
+.wrapper .faqs_cont .each_faq {
+	margin-top: 1em;
+	padding: 0.5em 0em;
+	border-bottom: 0.2em solid var(--Light_pink);
+}
+
+.wrapper .faqs_cont .each_faq.active {
+	border: none;
+}
+
+
+
+.wrapper .faqs_cont .each_faq .question_icons_cont {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.wrapper .faqs_cont .each_faq .question_icons_cont .question {
+	font-size: 1.2em;
+	font-weight: 600;
+	color: var(--Dark_purple);
+}
+
+.wrapper .faqs_cont .each_faq .question_icons_cont .icons_cont {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper .faqs_cont .each_faq .question_icons_cont .icons_cont .minus_icon {
+	display: none;
+}
+
+.wrapper .faqs_cont .each_faq.active .question_icons_cont .icons_cont .minus_icon {
+	display: block;
+}
+
+.wrapper .faqs_cont .each_faq.active .question_icons_cont .icons_cont .plus_icon {
+	display: none;
+}
+
+.wrapper .faqs_cont .each_faq .answer_cont {
+	color: var(--Grayish_purple);
+	font-size: 2em;
+	line-height: 0.8em;
+	height: 0em;
+	overflow: hidden;
+	transition: height 1.4s ease;
+
+}
+
+.wrapper .faqs_cont .each_faq.active .answer_cont {
+	height: 4em;
+}
+
+@media (min-width: 450px) {
+	body {
+		background-image: url('./assets/images/background-pattern-desktop.svg');
+		background-position: top;
+		background-repeat: no-repeat;
+		background-color: var(--Light_pink);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.wrapper {
+		width: 450px;
+	}
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
